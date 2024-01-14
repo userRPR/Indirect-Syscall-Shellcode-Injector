@@ -71,33 +71,33 @@
 	;------------------------------------------------------------------------------------------------------------------------------------------
 
 	sysNtAllocateVirtualMemory proc
-						mov r10, rcx
-						mov eax, ssnAVM 
-						jmp QWORD PTR [addrSyscallAVM]
-						ret
+		mov r10, rcx
+		mov eax, ssnAVM 
+		jmp QWORD PTR [addrSyscallAVM]
+		ret
 	sysNtAllocateVirtualMemory endp
 						
 
 	sysNtWriteVirtualMemory proc 
-						mov r10, rcx
-						mov eax, ssnWVM 
-						jmp QWORD PTR [addrSyscallWVM]
-						ret
+		mov r10, rcx
+		mov eax, ssnWVM 
+		jmp QWORD PTR [addrSyscallWVM]
+		ret
 	sysNtWriteVirtualMemory endp
 						
 
 	sysNtCreateThreadEx proc
-						mov r10, rcx
-						mov eax, ssnCTE 
-						jmp QWORD PTR [addrSyscallCTE]
-						ret
+		mov r10, rcx
+		mov eax, ssnCTE 
+		jmp QWORD PTR [addrSyscallCTE]
+		ret
 	sysNtCreateThreadEx endp
 
 
 	sysWaitForSingleObject proc
-						mov r10, rcx
-						mov eax, ssnWSO
-						jmp QWORD PTR [addrSyscallWSO]
-						ret
+		mov r10, rcx
+		mov eax, ssnWSO
+		jmp QWORD PTR [addrSyscallWSO]
+		ret
 	sysWaitForSingleObject endp
 end
