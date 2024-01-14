@@ -22,20 +22,24 @@
 		ret
 	passAddrAVM endp
 
+
 	passAddrWVM proc
 		mov addrSyscallWVM, rcx
 		ret
 	passAddrWVM endp
+
 
 	passAddrCTE proc
 		mov addrSyscallCTE, rcx
 		ret
 	passAddrCTE endp
 
+
 	passAddrWSO proc
 		mov addrSyscallWSO, rcx
 		ret
 	passAddrWSO endp
+
 
 	;------------------------------------------------------------------------------------------------------------------------------------------
 	; these procedures are for moving the SSN into local Assembly variables for each Windows NT function
@@ -48,11 +52,13 @@
 		ret
 	passNumAVM endp
 
+
 	passNumWVM proc 
 		mov ssnWVM, ecx 
 		mov ecx, [ssnWVM]
 		ret
 	passNumWVM endp
+
 
 	passNumCTE proc 
 		mov ssnCTE, ecx 
@@ -60,11 +66,13 @@
 		ret
 	passNumCTE endp
 
+
 	passNumWSO proc 
 		mov ssnWSO, ecx
 		mov ecx, [ssnWSO]
 		ret
 	passNumWSO endp
+
 
 	;------------------------------------------------------------------------------------------------------------------------------------------
 	; these procesdures are for indirectly calling the syscall instructions for each Windows NT function
