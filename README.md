@@ -11,4 +11,4 @@ I used the method outlined in this article https://redops.at/en/blog/direct-sysc
 To be used for lawful security testing or educational purposes only.
 
 # Resources/Credits
-- https://redops.at/en/blog/direct-syscalls-vs-indirect-syscalls (helped with learning how to dynamically resolve SSNs and syscall addresses)
+- https://redops.at/en/blog/direct-syscalls-vs-indirect-syscalls
