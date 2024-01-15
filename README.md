@@ -12,3 +12,4 @@ To be used for lawful security testing or educational purposes only.
 
 # Resources/Credits
 - https://redops.at/en/blog/direct-syscalls-vs-indirect-syscalls
+- https://0xdarkvortex.dev/hiding-in-plainsight/ (outlines problems of indirect syscalls and what can be done to solve them)
