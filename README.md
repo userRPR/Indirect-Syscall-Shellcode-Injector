@@ -1,7 +1,7 @@
 # Indirect-Syscall-Shellcode-Injector
 Shellcode injector using indirect syscalls.
 
-Researched and created this for learning purposes, my next step is to either encode shellcode and add decode function or use custom shellcode to enhance AV evasion. Currently, the bytecode in the program opens calc.exe as a POC.
+Researched and created this for learning purposes, my next step is to either encode shellcode or use custom shellcode to enhance AV evasion. Currently, the bytecode in the program opens calc.exe as a POC.
 
 This code uses indirect syscalls to bypass EDR hooking. Indirect syscalls were chosen over direct syscalls to remove a major IOC: syscalls taking place outside of ntdll. To accomplish this, a syscall instruction is replaced with a jump instruction to the address of the function's syscall instruction within ntdll. 
 
